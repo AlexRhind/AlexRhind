@@ -1,0 +1,79 @@
+Create a new npm platform supporting gulp 4.0, then set to GIT
+
+**This assumes that a global install of NPM on the Mac has already been initiated. 
+**This platform supports Gulp 4.0 on node.js. It uses node as a dev platform only.
+
+**List of useful calls
+$ pwd					//Lists the present working directory
+$ <filename> --v			//Lists version installed
+$ <filename> --save-dev			//Install in local directory
+$ ls					//Lists the contents of the pwd
+$ cd					//Change directory
+$ sudo [...] -g				//install globally
+$ cd ../ 				//go up one level of directory (no dir needed)
+$ rm <filename>				//delete file
+$ rm dir				//delete empty directory
+$ mk dir				//make directory
+$ touch	<filename>			//make a file (use touch for invisible files)
+$ npm uninstall <fileName> --save-dev 	//-g --save will remove globally
+
+
+**Create a new master directory and locate it in Atom, or navigate to the master folder.
+**Initiate npm in the folder:
+
+$ npm init
+$ sudo npm init (if access refused)
+
+
+**Check to see if gulp has been installed globally:
+
+$ npm gulp --v
+
+
+**Now install the following in the local folder to allow gulpfile.js to run:
+
+$ npm i browser-sync gulp gulp-autoprefixer gulp-changed gulp-imagemin gulp-sass gulp-sourcemaps gulp-strip-comments gulp-uglify readable-stream --save-dev
+
+**Create and distribute files for the app (root folder), add gulpfile.js to master folder. gulpfile uses specified folder sets under the app (root) folder: 
+
+app>
+	css
+	img > unused
+	includes
+	js
+	scss
+---
+
+dist
+
+**The watch function in gulpfile uses globbing: ** refers to all content.
+
+
+**Initiate GIT in the local folder and create a gitignore file. 
+
+$ git init
+$ touch	.gitignore
+
+**Add any files that git should ignore to the gitignore file (in the examples below files do not back up unnecessary duplicates):
+
+app/img/imgMin/**
+app/img/unused/**
+
+**Create a GITHUB repository on a registered account
+
+**Initiate GIT and check the status of the job
+$ git init
+$ git status
+
+**Add everything to the repository
+$ git add .
+
+**Run the first commit
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/<gitHubHolder>/<gitHubRepository>.git
+$ git push -u origin master
+
+
+
+
+

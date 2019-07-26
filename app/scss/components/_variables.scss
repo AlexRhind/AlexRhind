@@ -30,53 +30,15 @@
 //  24. Progress Bar
 
 
-//====================================================
-//Example from SASS materialize
-//====================================================
-
-//  $primary-color: color("materialize-red", "lighten-2") !default;
-//  $primary-color-light: false !default;
-//  $primary-color-dark: false !default;
-//  @if not $primary-color-light {
-//    $primary-color-light: lighten($primary-color, 15%);
-//  }
-//  @if not $primary-color-dark {
-//    $primary-color-dark: darken($primary-color, 15%);
-//  }
-
-// From Alex Partials
-//------------------------------------------
-// $copyBlack: #29292A;
-//
-// $darkGrey: #151515;
-// $midGrey: #707070;
-// $lightGrey: #E4E4E4;
-//
-// $white: #ffffff;
-//
-// $orange: #FFAA00;
-//
-// $teal: #2A9BA8;
-//
-// $purple: #6C52B2;
-//
-// $blue: #536DFE;
-//
-// $rose: #BC436C;
-//
-// $smaltBlue: #1D7FB4; //
-
-
 
 // 1. Colors
 // ==========================================================================
 
-$primary-color: color("orange", "lighten-2") !default;
-$primary-color-light: lighten($primary-color, 15%) !default; // can run $primary-color-light: false !default;
+$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("orange", "lighten-1") !default;
-
+$secondary-color: color("teal", "lighten-1") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
@@ -95,11 +57,11 @@ $badge-height: 22px !default;
 // Shared styles
 $button-border: none !default;
 $button-background-focus: lighten($secondary-color, 4%) !default;
-$button-font-size: 16px !default;
+$button-font-size: 14px !default;
 $button-icon-font-size: 1.3rem !default;
-$button-height: 30px !default;
+$button-height: 36px !default;
 $button-padding: 0 16px !default;
-$button-radius: 0px !important;
+$button-radius: 2px !default;
 
 // Disabled styles
 $button-disabled-background: #DFDFDF !default;
@@ -108,10 +70,10 @@ $button-disabled-color: #9F9F9F !default;
 // Raised buttons
 $button-raised-background: $secondary-color !default;
 $button-raised-background-hover: lighten($button-raised-background, 5%) !default;
-$button-raised-color: black !default;
+$button-raised-color: #fff !default;
 
 // Large buttons
-$button-large-font-size: 17px !default;
+$button-large-font-size: 15px !default;
 $button-large-icon-font-size: 1.6rem !default;
 $button-large-height: $button-height * 1.5 !default;
 $button-floating-large-size: 56px !default;
@@ -146,7 +108,7 @@ $card-link-color-light: lighten($card-link-color, 20%) !default;
 // 5. Carousel
 // ==========================================================================
 
-$carousel-height: 100% !default;
+$carousel-height: 400px !default;
 $carousel-item-height: $carousel-height / 2 !default;
 $carousel-item-width: $carousel-item-height !default;
 
@@ -191,10 +153,10 @@ $timepicker-clock-plate-bg: #eee !default;
 // 9. Dropdown
 // ==========================================================================
 
-$dropdown-bg-color: black !default;
-$dropdown-hover-bg-color: #4a4a4a !default;
+$dropdown-bg-color: #fff !default;
+$dropdown-hover-bg-color: #eee !default;
 $dropdown-color: $secondary-color !default;
-$dropdown-item-height: 25px !default;
+$dropdown-item-height: 50px !default;
 
 
 // 10. Forms
@@ -280,7 +242,7 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 // 13. Navigation Bar
 // ==========================================================================
 
-$navbar-height: 65px !default;
+$navbar-height: 64px !default;
 $navbar-line-height: $navbar-height !default;
 $navbar-height-mobile: 56px !default;
 $navbar-line-height-mobile: $navbar-height-mobile !default;
@@ -291,7 +253,7 @@ $navbar-brand-font-size: 2.1rem !default;
 // 14. Side Navigation
 // ==========================================================================
 
-$sidenav-width: 250px !default;
+$sidenav-width: 300px !default;
 $sidenav-font-size: 14px !default;
 $sidenav-font-color: rgba(0,0,0,.87) !default;
 $sidenav-bg-color: #fff !default;
@@ -341,8 +303,8 @@ $toast-action-color: #eeff41;
 // 20. Typography
 // ==========================================================================
 
-$font-stack: -apple-system, 'Barlow Semi Condensed', sans-serif;
-$off-black: rgba(0, 0, 0, 0.85) !default;
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+$off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
 $h1-fontsize: 4.2rem !default;
 $h2-fontsize: 3.56rem !default;
